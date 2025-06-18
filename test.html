@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>@InfluencerName | Digital Creator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #4361ee;
+      --secondary: #3a0ca3;
+      --accent: #f72585;
+      --light: #f8f9fa;
+      --dark: #212529;
+      --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      line-height: 1.6;
+      color: var(--dark);
+    }
+
+    .container {
+      max-width: 500px;
+      width: 100%;
+    }
+
+    .profile-card {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+      padding: 30px;
+      transform: translateY(0);
+      transition: var(--transition);
+    }
+
+    .profile-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    }
+
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid rgba(67, 97, 238, 0.2);
+      margin: 0 auto 15px;
+      transition: var(--transition);
+    }
+
+    .profile-img:hover {
+      transform: scale(1.05);
+      border-color: rgba(67, 97, 238, 0.4);
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 5px;
+      color: var(--primary);
+    }
+
+    .bio {
+      color: #666;
+      margin-bottom: 25px;
+      font-size: 1rem;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .link {
+      background: white;
+      border: 2px solid #eee;
+      padding: 12px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .link:hover {
+      transform: translateY(-3px);
+      border-color: var(--primary);
+      box-shadow: 0 5px 15px rgba(67, 97, 238, 0.2);
+    }
+
+    .link i {
+      margin-right: 10px;
+      font-size: 1.2rem;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 25px;
+    }
+
+    .social-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #f1f3f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      transition: var(--transition);
+    }
+
+    .social-icon:hover {
+      background: var(--primary);
+      color: white;
+      transform: scale(1.1);
+    }
+
+    /* Animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .profile-card > * {
+      animation: fadeIn 0.6s ease-out forwards;
+    }
+
+    .links a:nth-child(1) { animation-delay: 0.1s; }
+    .links a:nth-child(2) { animation-delay: 0.2s; }
+    .links a:nth-child(3) { animation-delay: 0.3s; }
+    .links a:nth-child(4) { animation-delay: 0.4s; }
+    .links a:nth-child(5) { animation-delay: 0.5s; }
+    .social-links { animation-delay: 0.6s; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="profile-card">
+      <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" 
+           alt="Profile" class="profile-img">
+      <h1>Alex Johnson</h1>
+      <p class="bio">Digital creator | Content strategist | Helping brands tell their stories</p>
+      
+      <div class="links">
+        <a href="#" class="link">
+          <i class="fas fa-play"></i> Latest YouTube Video
+        </a>
+        <a href="#" class="link">
+          <i class="fas fa-store"></i> My Merch Store
+        </a>
+        <a href="#" class="link">
+          <i class="fas fa-book"></i> Blog & Articles
+        </a>
+        <a href="#" class="link">
+          <i class="fas fa-envelope"></i> Contact for Collabs
+        </a>
+        <a href="#" class="link">
+          <i class="fas fa-calendar"></i> Upcoming Events
+        </a>
+      </div>
+      
+      <div class="social-links">
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Smooth hover effects
+    document.querySelectorAll('.link').forEach(link => {
+      link.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-3px)';
+      });
+      link.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+      });
+    });
+  </script>
+</body>
+</html>
